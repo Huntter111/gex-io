@@ -1,0 +1,50 @@
+//<BUTTONS (a.btn+tab)>
+// Сніппет (HTML): btn
+
+.button {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	padding: rem(12) rem(60);
+	font-weight: 700;
+	@include adaptiveValue('font-size', 18, 16, 0, 1180, 400);
+	line-height: math.div(25, 18);
+	color: #ffffff;
+	background: linear-gradient(92.56deg, #10a399 -81.74%, #32d3c9 100%);
+	border-radius: rem(6);
+	border: rem(1.5) solid transparent;
+	transition: all 0.5s ease 0s;
+	@media (max-width: $mobileSmall) {
+		width: 100%;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			border: rem(1.5) solid #269e96;
+			background: linear-gradient(92.56deg, rgba(16, 163, 153, 0.1) -81.74%, rgba(50, 211, 200, 0.1) 100%);
+			color: #269e96;
+		}
+	}
+	&._fw {
+		width: 100%;
+	}
+}
+.button-border {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	padding: rem(10) rem(20);
+	font-size: rem(14);
+	line-height: math.div(19, 14);
+	color: #269e96;
+	background: transparent;
+	border-radius: rem(6);
+	border: rem(1.5) solid #269e96;
+	transition: all 0.3s ease 0s;
+	@media (any-hover: hover) {
+		&:hover {
+			color: #ffffff;
+			background: linear-gradient(92.56deg, #10a399 -81.74%, #32d3c9 100%);
+			border: rem(1.5) solid transparent;
+		}
+	}
+}

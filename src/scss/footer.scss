@@ -1,0 +1,135 @@
+//====================================================================================================
+.footer {
+	background: #333333;
+	padding-top: rem(50);
+	padding-bottom: rem(50);
+	&__container {
+	}
+
+	&__wrapper {
+		display: flex;
+		// flex-wrap: wrap;
+		@include adaptiveValue('row-gap', 79, 40, 0, 479, 350);
+		@include adaptiveValue('column-gap', 81, 40, 0, 1200, 991);
+		&:not(:last-child) {
+			margin-bottom: rem(50);
+		}
+		@media (max-width: em(1200)) {
+			flex-direction: column;
+		}
+		@media (max-width: $mobileSmall) {
+			flex-direction: column-reverse;
+		}
+	}
+
+	&__actions {
+	}
+
+	&__column {
+	}
+
+	&__copyright {
+		color: #d1d1d1;
+		font-family: 'Inter';
+		@include adaptiveValue('font-size', 16, 14, 0, 991, 767);
+		line-height: math.div(19, 16);
+		@media (min-width: $mobileSmall) {
+			text-align: center;
+		}
+	}
+}
+.actions-footer {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	row-gap: rem(15);
+	flex-grow: 0;
+	&__logo {
+	}
+
+	&__text {
+		max-width: rem(151);
+		font-family: 'Open Sans';
+		font-size: rem(14);
+		line-height: math.div(19, 14);
+		color: #ffffff;
+		&:not(:last-child) {
+			margin-bottom: rem(15);
+		}
+	}
+
+	&__social-media {
+	}
+}
+.social-media {
+	&__link {
+		&:hover {
+			background-color: rgba(95, 198, 193, 0.7);
+			fill: #ffffff;
+		}
+	}
+}
+.columns-footer {
+	// display: flex;
+	// flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: minmax(rem(185), rem(187)) minmax(rem(190), rem(212)) minmax(rem(166), rem(199)) minmax(
+			rem(90),
+			rem(102)
+		);
+
+	@media (max-width: $mobile) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media (max-width: $mobileSmall) {
+		grid-template-columns: 1fr;
+	}
+	@include adaptiveValue('column-gap', 73, 30, 0, 1180, 1000);
+	@include adaptiveValue('row-gap', 73, 40, 0, 479, 350);
+	// @include adaptiveValue('column-gap', 73, 40, 0, 991, 767);
+	@media (max-width: $mobileSmall) {
+		flex-direction: column;
+	}
+	&__column {
+	}
+}
+.column-footer {
+	flex-shrink: 0;
+	font-family: 'Open Sans';
+	&__title {
+		font-weight: 600;
+		font-size: rem(15);
+		line-height: 1.6;
+		color: #ffffff;
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+		}
+	}
+	&__menu {
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		row-gap: rem(15);
+	}
+
+	&__item {
+	}
+
+	&__link {
+		font-size: rem(15);
+		line-height: 1.6;
+		color: #d1d1d1;
+		@media (any-hover: hover) {
+			&:hover {
+				color: #ffffff;
+				text-decoration: underline;
+			}
+		}
+	}
+}
+.column-foter {
+}
+
+//====================================================================================================

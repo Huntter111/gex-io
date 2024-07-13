@@ -1,0 +1,103 @@
+// Заголовки, загальні БЕМ блоки та інше...
+.social-media {
+	display: flex;
+	column-gap: rem(18);
+	flex-wrap: wrap;
+	row-gap: rem(10);
+	&__link {
+		display: inline-flex;
+		fill: #269e96;
+		width: rem(48);
+		height: rem(48);
+		border: rem(1.5) solid #5fc6c1;
+		padding: rem(12);
+		border-radius: 50%;
+		transition: all 0.3s ease 0s;
+		@media (min-width: $mobile) {
+			@media (any-hover: hover) {
+				&:hover {
+					background-color: rgba(38, 158, 150, 0.692);
+					fill: $mainColor;
+				}
+			}
+		}
+	}
+}
+.text-gradient {
+	// font-family: 'Open Sans';
+	// font-style: normal;
+	// font-weight: 700;
+	// font-size: 32px;
+	// line-height: 44px;
+	background: linear-gradient(92.28deg, #10a399 -60.31%, #32d3c9 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	text-fill-color: transparent;
+}
+.price-block {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 700;
+	@include adaptiveValue('font-size', 15.4, 7.44, 0, 1200, 767);
+	line-height: math.div(21, 15.4);
+	color: #312e52;
+}
+.percent-crypto--good {
+	padding: rem(8) rem(12);
+	color: #79f09a;
+	background: rgba(51, 170, 84, 0.2);
+	border-radius: rem(8);
+}
+.percent-crypto--bad {
+	padding: rem(8) rem(12);
+	color: #f07979;
+	background: rgba(170, 51, 51, 0.2);
+	border-radius: rem(8);
+}
+
+// !
+.info-block {
+	display: flex;
+	align-items: center;
+	&__column {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		row-gap: rem(10);
+	}
+
+	&__title {
+		font-weight: 700;
+		@include adaptiveValue('font-size', 32, 22, 0, 1200, 991);
+		line-height: math.div(44, 32);
+	}
+
+	&__desc {
+		@include adaptiveValue('font-size', 18, 15, 0, 1200, 991);
+		line-height: 1.6;
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+		}
+	}
+
+	&__button {
+		// font-weight: 400;
+		// @include adaptiveValue('font-size', 18, 15, 0, 1200, 991);
+		// line-height: 1.6;
+		align-self: flex-start;
+		@media (max-width: $mobileSmall) {
+			width: 100%;
+		}
+	}
+
+	&__image {
+		img {
+			max-width: 100%;
+		}
+	}
+}
+.text-gradient {
+}
+.button {
+}
